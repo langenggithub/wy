@@ -1,0 +1,9 @@
+destination: 
+  branch: main
+  path: _data/comments
+allowedFields: 
+  - name
+  - email
+  - comment
+branch: main
+commitMessage: "Add comment by {{fields.name}}"
