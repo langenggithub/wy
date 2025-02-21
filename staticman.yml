@@ -1,9 +1,11 @@
-destination: 
-  branch: main
-  path: _data/comments
-allowedFields: 
-  - name
-  - email
-  - comment
-branch: main
-commitMessage: "Add comment by {{fields.name}}"
+comments:
+  allowedFields: ["name", "email", "message"]
+  branch: "main"
+  format: "json"
+  moderation: true
+  requiredFields: ["name", "message"]
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
